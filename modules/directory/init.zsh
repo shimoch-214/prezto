@@ -18,8 +18,8 @@ setopt PUSHD_TO_HOME        # Push to home directory when no argument is given.
 setopt CDABLE_VARS          # Change directory to a path stored in a variable.
 setopt MULTIOS              # Write to multiple descriptors.
 setopt EXTENDED_GLOB        # Use extended globbing syntax.
-unsetopt CLOBBER            # Do not overwrite existing files with > and >>.
-                            # Use >! and >>! to bypass.
+# unsetopt CLOBBER            # Do not overwrite existing files with > and >>.
+#                             # Use >! and >>! to bypass.
 
 #
 # Aliases
@@ -27,6 +27,6 @@ unsetopt CLOBBER            # Do not overwrite existing files with > and >>.
 
 if ! zstyle -t ':prezto:module:directory:alias' skip; then
   alias -- -='cd -'
-  alias d='dirs -v'
+  # alias d='dirs -v'
   for index ({1..9}) alias "$index"="cd +${index}"; unset index
 fi
